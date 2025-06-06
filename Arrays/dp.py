@@ -4,7 +4,7 @@ def fact(nums):
         for j in range(i+1,len(nums)-1):
             for k in range(j+1,len(nums)):
                 target = nums[i]+nums[j]+nums[k]
-                if target == 0:
+                if target == 5:
                     s.append([nums[i],nums[j],nums[k]])
     return s
 

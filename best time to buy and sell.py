@@ -8,4 +8,4 @@ def btime_to_buyE_sell(prices):
             maxprofit = max(maxprofit, price - small)
     return maxprofit
 
-print(btime_to_buyE_sell([2,5,3,4,9]))
+print(btime_to_buyE_sell([9,5,8,4,6,12]))

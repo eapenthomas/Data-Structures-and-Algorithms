@@ -7,4 +7,6 @@ def quicksort(arr):
     middle = [x for x in arr if x == pivot]
     return quicksort(left)+middle+quicksort(right)
 arr = [2, 5, 87, 4, 5, 9, 0, 3, 67, 6, 11, 32, 4]
-print(quicksort(arr))
+
+s = float('-inf')
+print(s<89)
