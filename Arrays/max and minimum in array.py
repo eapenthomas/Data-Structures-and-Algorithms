@@ -24,8 +24,6 @@ def findminmax(arr):
 
 
 
-
-
    return print(f"small : {small} , big = {big}")
 arr = [2,5,4,8,9,6,11]
 findminmax(arr)
