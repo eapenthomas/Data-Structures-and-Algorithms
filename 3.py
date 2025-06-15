@@ -3,8 +3,11 @@ nums =[2,5,8,9,4,1]
 target =7
 nums_map ={1:"key",2:"value"}
 print(nums_map)
-
-
+s = [1,3,4,5]
+print(s)
+f = 123
+si = list(map(int, str(f)))
+print(si)
 # n =8
 # print(bin(n).replace("0b",""))
 # binary = ""
