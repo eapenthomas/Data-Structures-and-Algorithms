@@ -8,8 +8,6 @@ def romanToInt(rom):
             total += roman_values[rom[i]]
     return total
 
-
-
 def int_to_roman(num):
     roman_map = [
         (1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'),
@@ -17,12 +15,12 @@ def int_to_roman(num):
         (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')
     ]
 
-    roman_string = ""
-    for value,symbol in roman_map:
-        while num >= value:
-            roman_string +=symbol
-            num = num-value
-    return print(roman_string)
+    romanstr = ""
+    for val,symbol in roman_map:
+        while num >= val:
+            romanstr += symbol
+            num -= val
+    return print(romanstr)
 
 
 print(romanToInt("MMCM"))

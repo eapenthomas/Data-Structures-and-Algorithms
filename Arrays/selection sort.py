@@ -1,13 +1,12 @@
 from functools import cache
 def quick_sort(arr):
-
-    if len(arr) <= 1:
-        return arr
-    mid = arr[0]
-    right = [x for x in arr if x > mid]
-    middle = [x for x in arr if x==mid]
-    left = [x for x in arr if x < mid]
-    return quick_sort(left)+middle+quick_sort(right)
+   if len(arr)< 1:
+       return arr
+   mid = arr[0]
+   left = [x for x in arr if x < mid]
+   middle = [x for x in arr if x == mid]
+   right = [x for x in arr if x  > mid]
+   return quick_sort(left)+middle+quick_sort(right)
 # Example usage:
 def selection_sort(arr):
     for i in range(len(arr)-1):
