@@ -11,4 +11,5 @@ def majority(nums):
     return  candidate
 
 nums=[3,3,3,2,3,2,2,2,1,2,2,3]
-print(majority(nums))
+for i,num in enumerate(nums):
+    print(i,num)

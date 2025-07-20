@@ -1,33 +1,36 @@
-def mergesort(arr, low, high):
-    if low < high:  # Base case: Stop when the subarray has one element
-        mid = (low + high) // 2  # Calculate the middle index
-        mergesort(arr, low, mid)
-        mergesort(arr, mid + 1, high)
-        merge(arr, low, mid, high)
-
-def merge(arr, low, mid, high):
-    left = arr[low:mid + 1]
-    right = arr[mid + 1:high + 1]
-    i = j = 0
-    k = low
-
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            arr[k] = left[i]
-            i += 1
+def mergesort(arr):
+    n = len(arr)
+    if n == 1:
+        return arr
+    m = n//2
+    left = arr[:m]
+    right = arr[m:]
+    left = mergesort(left)
+    right = mergesort(right)
+    sortedarray = [0]*n
+    lindex = len(left)
+    rindex = len(right)
+    l = r = i = 0
+    while l<lindex and r < rindex:
+        if left[l] < right[r]:
+            sortedarray[i] = left[l]
+            l +=1
         else:
-            arr[k] = right[j]
-            j += 1
-        k += 1
-    for i in range(i,len(left)):
-       arr[k] =left[i]
-       k +=1
+            sortedarray[i] = right[r]
+            r += 1
+        i += 1
+    while l < lindex:
+        sortedarray[i] = left[l]
+        i +=1
+        l += 1
+    while r < rindex:
+        sortedarray[i] = right[r]
+        i +=1
+        r += 1
 
-    for j in range(j,len(right)):
-        arr[k] = right[j]
-        k +=1
+    return sortedarray
 
 
-arr = [7, 5, 8, 3, 4, 9, 2]
-mergesort(arr, 0, len(arr) - 1)
-print("Sorted array:", arr)
+arr = [7, 5, 8,0,4, 3, 4, 9, 2]
+
+print("Sorted array:", mergesort(arr))
