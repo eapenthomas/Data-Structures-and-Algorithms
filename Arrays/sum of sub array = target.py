@@ -22,7 +22,7 @@ from itertools import permutations
 
 
 s = [5, 3, 5, 8, 1, 1, 3, -1, 0, 3, 5, 7]
-target =18
+target =7
 start = 0
 cursum = 0
 res = []

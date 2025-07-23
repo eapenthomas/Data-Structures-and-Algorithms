@@ -14,6 +14,6 @@ class Searchinsert:
         return left
 
 obj = Searchinsert()
-nums = [1,2,3,3,4,5,6,8,9,9,10]
+nums = [1,4,5,6,8,9,9,10]
 
 print(obj.serins(nums,7))
