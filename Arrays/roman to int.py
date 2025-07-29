@@ -1,3 +1,17 @@
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        roman = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+        total = 0
+        prev = 0
+        for c in reversed(s):
+            curr = roman[c]
+            if curr < prev:
+                total -= curr
+            else:
+                total += curr
+            prev = curr
+        return total
+
 def romanToInt(rom):
     total = 0
     roman_values = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
@@ -25,3 +39,6 @@ def int_to_roman(num):
 
 print(romanToInt("MMCM"))
 int_to_roman(60)
+
+sol = Solution()
+print(sol.romanToInt("IV"))
