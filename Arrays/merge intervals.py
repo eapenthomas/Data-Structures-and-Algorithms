@@ -5,9 +5,11 @@ class Solution:
         intervals.sort(key = lambda interval:interval[0])
         merged = []
         for interval in intervals:
+            # no merge required case
             if not merged or merged[-1][-1] < interval[0]:
                 merged.append(interval)
             else:
+                # when overlapping happens
                 merged[-1] = [merged[-1][0],max(merged[-1][1],interval[1])]
         return merged
 
