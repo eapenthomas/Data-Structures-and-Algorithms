@@ -18,9 +18,9 @@ def productExceptSelf(nums):
     for i in range(n-1,-1,-1):
         answer[i] *= suffix
         suffix *= nums[i]
-    return answer
+    return print(answer)
 
 nums = [1,2,3]
 print(nums)
- 
+productExceptSelf(nums)
 prodself(nums)

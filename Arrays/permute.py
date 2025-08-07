@@ -10,5 +10,5 @@ def nextPermutation(nums):
     nums[i+1:] = reversed(nums[i+1:])
     print(nums)
 
-num = [2,3,4]
+num = [2,3,4,6]
 nextPermutation(num)
