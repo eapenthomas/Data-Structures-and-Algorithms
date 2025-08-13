@@ -8,6 +8,8 @@ def find_min_max(arr,low,high):
     min2,max2 = find_min_max(arr,mid+1,high)
     return min(min1,min2),max(max1,max2)
 
-arr = [3,3,4,6,9]
+# ✅ Time Complexity: O(n)
+# ✅ Space Complexity: O(log n) (due to recursion stack)
+arr = [3,3,4,6,9,-2,11]
 minv,maxv = find_min_max(arr,0,len(arr)-1)
 print(f"Minimum ={minv} and maximum = {maxv} ")
