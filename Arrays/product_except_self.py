@@ -10,17 +10,17 @@ def prodself(nums):
 
 def productExceptSelf(nums):
     n = len(nums)
-    answer = [1]*n
+    answer = [1] * n
     prefix = suffix = 1
     for i in range(n):
         answer[i] = prefix
-        prefix *=nums[i]
+        prefix = prefix * nums[i]
     for i in range(n-1,-1,-1):
-        answer[i] *= suffix
-        suffix *= nums[i]
+        answer[i] = answer[i] * suffix
+        suffix = suffix * nums[i]
     return print(answer)
 
-nums = [1,2,3]
+nums = [1,2,3,4]
 print(nums)
 productExceptSelf(nums)
 prodself(nums)
