@@ -14,6 +14,8 @@ class Searchinsert:
         return left
 
 obj = Searchinsert()
-nums = [1,4,5,6,8,9,9,10]
+nums = [1,4,5,6,8,9,9,1]
+nums2 =[3,5,4,2,1,6,7,8,9]
 
-print(obj.serins(nums,7))
+for i,j in zip(nums,nums2):
+    print(i," ",j)

@@ -9,4 +9,5 @@ for value,symbol in roman_map:
     count = num // value
     result.append(symbol*count)
     num = num - (value*count)
+print(result)
 print("".join(result))

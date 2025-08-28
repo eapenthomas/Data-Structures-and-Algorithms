@@ -12,7 +12,6 @@ class Solution:
             key = tuple(count)
         # why appending rather than =  is that ipo equal to anel last word mathrame keru like ate,nat oke ...full list kittan anu append() use cheyyune
             anagrams_dict[key].append(s)
-
         return list(anagrams_dict.values() )
 
 strs =["eat","tea","tan","ate","nat","bat"]

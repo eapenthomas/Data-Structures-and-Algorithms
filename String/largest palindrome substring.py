@@ -5,7 +5,7 @@ def longest_palindrome(s: str) -> str:
             left -= 1
             right += 1
         # Return the palindrome substring
-        return s[left + 1:right]
+        return s[left +1:right]
 
     if not s:
         return ""
@@ -24,5 +24,5 @@ def longest_palindrome(s: str) -> str:
 
 # Example usage:
 s = [1,2,4,5,6,7]
-input_string = "abcd"
+input_string = "abbacd"
 print(longest_palindrome(input_string))  # Output: "bab" or "aba"

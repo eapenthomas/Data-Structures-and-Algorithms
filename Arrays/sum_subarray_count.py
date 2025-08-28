@@ -22,7 +22,7 @@ def subarraySumcount(nums, k):
             count += prefix_count[cursum - k]
         # Add current prefix sum to the map
         prefix_count[cursum] += 1
-    return count
+    return print(count)
 
 nums = [1,2,3,2,3,3]
 k = 5

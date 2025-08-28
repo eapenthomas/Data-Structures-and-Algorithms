@@ -24,7 +24,7 @@ def isAnagram(s, t):
     for i in range(len(s)):
         count[ord(s[i]) - ord('a')] += 1
         count[ord(t[i]) - ord('a')] -= 1
-    return all([x==0  for x in count ])
+    return all(x == 0 for x in count)
 
 
 print(isAnagram(word1,word1))

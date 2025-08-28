@@ -1,4 +1,3 @@
-arr1 = [[1,3],[2,6],[8,10],[11,15]]
 from typing import List
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
@@ -12,6 +11,7 @@ class Solution:
                 # when overlapping happens
                 merged[-1] = [merged[-1][0],max(merged[-1][1],interval[1])]
         return merged
-
+arr1 = [[1,3],[2,6],[8,10],[11,15]]
 sol = Solution()
 print(sol.merge(arr1))
+

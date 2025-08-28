@@ -10,8 +10,8 @@ class Solution(object):
             else:
                 result.append(nums[right] ** 2)
                 right -= 1
-        result.reverse()
-        return result
+
+        return result[::-1]
 
 sol = Solution()
-print(sol.sortedSquares([-2,0,1,2,3,4]))
+print(sol.sortedSquares([-5,-2,0,1,2,3,4]))
